@@ -1,25 +1,12 @@
 var assert = require('assert');
+require("mocha-allure-reporter");
+
 describe('Микросервис обработки анкет партнеров', function () {
-  describe('#00010001 подсистема длинных анкет', function () {
+  const testStep = allure.createStep("initial",()=> {
+    //something
+    assert.equal([1, 2, 3].indexOf(4), -1);
+  })
     it('правильный /POST запрос на создание анкеты от партнера такого-то должен быть принят', function () {
-        assert.equal([1, 2, 3].indexOf(4), -1);
+      testStep();
     });
-    it('правильный /POST запрос на создание анкеты от нового неизвестного партнера должен быть отклонен', function () {
-        assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-    it('неполный /POST запрос на создание анкеты от нового таког-то партнера должен быть отклонен', function () {
-        assert.equal([1, 2, 3].indexOf(4), -1);
-    });   
-  });
-  describe('#00010002 подсистема коротких анкет', function () {
-    it('правильный /POST запрос на создание анкеты от партнера такого-то должен быть принят', function () {
-        assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-    it('правильный /POST запрос на создание анкеты от нового неизвестного партнера должен быть отклонен', function () {
-        assert.equal([1, 2, 3].indexOf(4), -1);
-    });
-    it('неполный /POST запрос на создание анкеты от нового таког-то партнера должен быть отклонен', function () {
-        assert.equal([1, 2, 3].indexOf(4), -1);
-    });   
-  });
 });
